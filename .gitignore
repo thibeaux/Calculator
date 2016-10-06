@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+main()
+{
+    double num1, num2, result;
+    int choice1;
+
+    printf("Welcome to your basic calculator!");
+
+    printf("\n\n1. Multiplication");
+    printf("\n2. Division");
+    printf("\n3. Addition");
+    printf("\n4. Subtraction");
+    printf("\n5. Exit\n\n");
+
+
+//This gives you the option if you would like to multiply
+do
+{
+    printf("What would you like to do?");
+    scanf("%d", &choice1);
+   switch (choice1)
+   {
+    case (1) :
+// multiplication codes
+        printf("Whats the first and second number you would like to multiply?\n");
+        printf("formate like this: ( 2 (space) 2 ), then hit enter..");
+        scanf("%lf %lf" , &num1 ,&num2);
+
+        result = num1 * num2;
+        printf("%lf", result);
+        break;
+// Division codes
+    case (2) :
+        printf("Whats the first  and second number you would like to Divide?\n");
+        printf("formate like this: ( 2 (space) 2 ), then hit enter..");
+        scanf("%lf %lf", &num1, &num2);
+
+        result = num1 / num2;
+        printf("%lf", result);
+        break;
+
+// Addition codes
+    case (3) :
+        printf("Whats the first and second number you would like to Divide?\n");
+        printf("formate like this: ( 2 (space) 2 ), then hit enter..");
+        scanf("%lf %lf", &num1, &num2);
+
+        result = num1 + num2;
+        printf("%lf", result);
+        break;
+
+// Subtract codes
+    case (4) :
+        printf("Whats the first and second number you would like to Divide?\n");
+        printf("formate like this: ( 2 (space) 2 ), then hit enter..");
+        scanf("%lf %lf", &num1, &num2);
+
+        result = num1 - num2;
+        printf("%lf", result);
+        break;
+
+    case (5) : printf("Thank you for using Your Basic Calculator!\n\n\n");
+                exit(1);
+
+    default: printf("Try again pleases...\n\n"); break;
+    }
+}
+while ((choice1 > 1) || (choice1 < 4));
+
+return 0;
+}
